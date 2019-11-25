@@ -10,7 +10,7 @@ import Person from '../models/Person';
 
 
 
-export default class dashboard extends React.Component {
+export default class Dashboard extends React.Component {
   static propTypes = {
     messages: PropTypes.array,
   }

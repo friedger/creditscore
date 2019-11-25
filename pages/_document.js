@@ -1,13 +1,12 @@
 import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
-import { injectGlobal, ServerStyleSheet } from 'styled-components';
+import { createGlobalStyle, ServerStyleSheet } from 'styled-components';
 import { normalize } from 'polished';
 
 // import theme from '../styled/theme';
 
-// eslint-disable-next-line no-unused-expressions
-injectGlobal`
-  ${normalize()}
+export const GlobalStyle = createGlobalStyle`
+  ${normalize}
   body, html{
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
@@ -29,6 +28,7 @@ export default class MyDocument extends Document {
           {this.props.styleTags}
         </Head>
         <body className="custom">
+          <GlobalStyle />
           <Main />
           <NextScript />
         </body>

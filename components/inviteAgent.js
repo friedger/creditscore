@@ -11,7 +11,7 @@ import Person from '../models/Person';
 
 
 
-export default class inviteAgent extends React.Component {
+export default class InviteAgent extends React.Component {
   static propTypes = {
     messages: PropTypes.array,
   }
@@ -86,7 +86,7 @@ export default class inviteAgent extends React.Component {
   messages() {
     return this.state.messages.map(message => (
       <div key={message._id}>
-        
+
           </div>
     ));
   }

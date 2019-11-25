@@ -12,6 +12,7 @@ import Message from '../models/Message';
 import Person from '../models/Person';
 
 import Feed from '../components/feed';
+import Menu from '../components/menu';
 
 class Home extends React.Component {
   static propTypes = {
@@ -78,9 +79,10 @@ class Home extends React.Component {
 {' '}
                   {currentUser.username}
                   {'. '}
-                  <a href="javascript:void(0)" onClick={this.logout}>Log Out</a>
+                  <a onClick={this.logout}>Log Out</a>
                 </Text.small>
                 <Feed messages={messages} />
+                <Menu />
               </>
             ) : (
               <>

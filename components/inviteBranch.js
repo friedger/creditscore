@@ -10,7 +10,7 @@ import Person from '../models/Person';
 import { UserGroup } from 'radiks';
 
 
-export default class inviteBranch extends React.Component {
+export default class InviteBranch extends React.Component {
   static propTypes = {
     messages: PropTypes.array,
   }
@@ -51,12 +51,12 @@ export default class inviteBranch extends React.Component {
   const group = new UserGroup({ name: 'Branch 1' });
   await group.create();
 
-  //Branch Invites ID. 
+  //Branch Invites ID.
   const group = await UserGroup.findById(Branch1);
     const usernameToInvite = _id;
     const invitation = await group.makeGroupMembership(usernameToInvite);
         console.log(invitation._id); // the ID used to later activate an invitation
-    
+
     //List all Agents
     const groups = await UserGroup.myGroups();
 
